@@ -28,3 +28,9 @@ new Vue({
   render: h => h(App)
 })
 
+
+
+$(document).ready(function(){
+  $('.parallax-window').parallax({imageSrc: '/src/assets/img/landscape.jpg'});
+});
+

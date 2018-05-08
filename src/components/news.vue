@@ -15,7 +15,7 @@
             </div>
         </div>
     </div>
-        <section class="news_second_section">
+        <section class="news_second_section parallax-window" data-parallax="scroll" data-image-src="/src/assets/img/landscape.jpg">
             <img src="src/assets/img/landscape.jpg" alt="">
         </section>
     <div class="text_container">
@@ -37,7 +37,7 @@ export default {
       }
   },
   mounted() {
-      this.test ()
+      
   },
   methods: {
       test() {
@@ -55,13 +55,13 @@ export default {
     overflow-x: hidden;
     width: 100%;
     min-height: 100%;
+    background-color: rgb(255, 255, 255);
 
 }
 
 .news_main {
     width: 100%;
     height: 100%;
-    background-color:rgba(255,0 ,0 , 0.01);
     position: relative;
     margin: 0 auto;
 }
@@ -92,6 +92,13 @@ export default {
     overflow-y: scroll;
     overflow-x: hidden;
     margin: 0 auto;
+}
+
+
+.parallax-window {
+  min-height: 320px;
+  background: transparent;
+
 }
 
 

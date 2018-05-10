@@ -2,13 +2,24 @@
   <div id="app" class="wrapper">
     <nav class="nav_bar">
       <i class="fa fa-btc"></i>
+      <i class="fa fa-bars"></i>
       <ul>
         <li><router-link to="/contacts">Contacts</router-link></li>
         <li><router-link to="/guides">Guides</router-link></li>
         <li><router-link to="/templates">Templates</router-link></li>
         <li><router-link to="/about">About</router-link></li>
         <li><router-link to="/news">News</router-link></li>
-        <li><router-link to="/">Main</router-link></li>
+        <li><router-link to="/">Home</router-link></li>
+      </ul>
+    </nav>
+    <nav class="hide_nav">
+      <ul>
+        <li><router-link to="/contacts">Contacts</router-link></li>
+        <li><router-link to="/guides">Guides</router-link></li>
+        <li><router-link to="/templates">Templates</router-link></li>
+        <li><router-link to="/about">About</router-link></li>
+        <li><router-link to="/news">News</router-link></li>
+        <li><router-link to="/">Home</router-link></li>
       </ul>
     </nav>
     <section class="start_section">
@@ -117,6 +128,13 @@ export default {
   position: absolute;
   transform: translateY(23px);
   transition: .3s;
+}
+
+.fa-bars {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  display: none;
 }
 
 .start_section {
@@ -237,5 +255,111 @@ export default {
   display: none;
 }
 
+.hide_nav{
+  top: 55px;
+  right: 0px;
+  position: fixed;
+  width: 40%;
+  height: 50vh;
+  background-color:rgba(0, 0, 0, 0.788);
+  z-index: 14;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  transition: .2s;
+}
+
+.hide_nav ul li{
+  list-style-type: none;
+  padding: 0.5rem;
+  text-align: center;
+  transform: translateY(37px);
+}
+
+.hide_nav a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.hide_nav a:hover{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+
+.hide_nav a:before{
+  content: "";
+  left: 5px;
+  width: 0%;
+  height: 1.5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  transform: translateY(23px);
+  transition: .3s;
+}
+
+.hide_nav a:hover:before{
+  content: "";
+  width: 90%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  transform: translateY(23px);
+  transition: .3s;
+}
+
+@media (max-width: 700px) {
+  .nav_bar {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(220, 255, 245, 0.9);
+  top: 0;
+  z-index: 10;
+  box-shadow: 0.6px 0.6px 0.6px 0.6px rgb(87, 68, 68);
+}
+
+.nav_bar ul li{
+  list-style-type: none;
+  float: right;
+}
+
+.nav_bar a {
+  display: none;
+  position: relative;
+  top: 16px;
+  right: 20px;
+  text-decoration: none;
+  color: black;
+  padding: 0 15px 0 15px;
+}
+
+.nav_bar a:before{
+  content: "";
+  left: 5px;
+  width: 0%;
+  height: 1.5px;
+  background-color: rgba(0,0,0, 0.3);
+  position: absolute;
+  transform: translateY(23px);
+  transition: .3s;
+}
+
+.nav_bar a:hover:before{
+  content: "";
+  width: 90%;
+  height: 1px;
+  background-color: rgba(0,0,0, 0.3);
+  position: absolute;
+  transform: translateY(23px);
+  transition: .3s;
+}
+
+.fa-bars {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  display: block;
+}
+}
 
 </style>

@@ -29,8 +29,14 @@ new Vue({
 })
 
 
-
+const hide_nav = $('.hide_nav');
 $(document).ready(function(){
-  $('.parallax-window').parallax({imageSrc: '/src/assets/img/landscape.jpg'});
+  $('.fa-bars').click(function () { 
+      hide_nav.css('right', '-40%');
+  });
+});
+
+$('.fa-bars').click(function () {
+  hide_nav.css('right', '40%');
 });
 

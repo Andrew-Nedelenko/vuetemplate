@@ -18,6 +18,23 @@
            <div class="fs_c_middle">
              <div class="fs_c_in">
                <h1>{{ msg }}</h1>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium cupiditate earum tempore. 
+                 Eum blanditiis eos harum tenetur quaerat corporis, aliquam cumque eaque nemo et itaque. Quos accusamus blanditiis odit, 
+                 dignissimos hic porro perspiciatis voluptas ut eveniet voluptate quia iste veniam nulla debitis, fugiat placeat praesentium 
+                 ad modi recusandae. Ipsa, porro.</p>
+                 <a href="#"><button>Buy Now</button></a>
+                 <a href="#"><button>Free Trial</button></a>
+             </div>
+           </div>
+         </div>
+       </div>
+    </section>
+    <section class="main_section">
+      <div class="first_section_container">
+         <div class="fs_c">
+           <div class="fs_c_middle">
+             <div class="fs_c_in">
+               <h2>Lorem ipsum dolor sit amet.</h2>
              </div>
            </div>
          </div>
@@ -33,7 +50,7 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Vue.js App'
+      msg: 'Lorem ipsum dolor sit amet.'
     }
   }
 }
@@ -60,9 +77,10 @@ export default {
   position: fixed;
   width: 100%;
   height: 50px;
-  background-color: rgba(144,219,255,0.9);
+  background-color: rgba(220, 255, 245, 0.9);
   top: 0;
   z-index: 10;
+  box-shadow: 0.6px 0.6px 0.6px 0.6px rgb(87, 68, 68);
 }
 
 .nav_bar ul li{
@@ -119,7 +137,7 @@ export default {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: rgba(118, 157, 158, 0.5);
+  background-color: rgb(105, 204, 199);
   top: 0;
   left: 0;
   z-index: 1;
@@ -163,6 +181,44 @@ export default {
   color: rgb(255, 255, 255);
 }
 
+.first_section_container .fs_c_in p{
+  font-weight: normal;
+  z-index: 3;
+  padding: 10px 10% 20px 10%;
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+}
+
+.first_section_container .fs_c_in button {
+  width: 180px;
+  height: 50px;
+  border: 1px solid whitesmoke;
+  background-color: rgba(245, 241, 24, 0);
+  border-radius: 25px;
+  margin: 0 5px 0 5px;
+  text-transform: uppercase;
+  transition: .3s;
+  color: white;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.first_section_container .fs_c_in button:hover{
+  width: 180px;
+  height: 50px;
+  border: none;
+  background-color: rgba(187, 255, 0, 0.952);
+  border-radius: 25px;
+  margin: 0 5px 0 5px;
+  text-transform: uppercase;
+  transition: .3s;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.651);
+}
+
 
 .nav_bar .fa-btc {
   position: absolute;
@@ -172,6 +228,14 @@ export default {
   opacity: .8;
 }
 
+.main_section {
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  display: none;
+}
 
 
 </style>

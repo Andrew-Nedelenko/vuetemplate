@@ -285,7 +285,7 @@ export default {
     text-decoration: none;
     color: rgb(62,119,191);
     font-size: 0.8em;
-    padding: 5px 5px 0 20px;
+    padding: 0;
 }
 
 .rotate {

@@ -11,7 +11,11 @@
                     <h2>Latest news</h2>
                     <p>{{ msg }}{{ msg }}{{ msg }}</p>
 
+                    <h2>Latest news</h2>
+                    <p>{{ msg }}{{ msg }}{{ msg }}</p>
+
                 </div>
+                
             </div>
         </div>
     </div>
@@ -79,6 +83,7 @@ export default {
     position: relative;
     display: block;
     height: 100%;
+    border-left: 1px solid gainsboro;
 }
 
 .inner_content p {
@@ -120,7 +125,8 @@ export default {
  
 ::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background-color: rgba(105,204,199, 0.9); 
 }
 
 
@@ -160,7 +166,15 @@ export default {
     font-size: 1.7em;
     text-align: center;
 }
- 
+
+@media (max-width: 576px){
+    .inner_content {
+    position: relative;
+    display: block;
+    height: 100%;
+    border: none;
+}
+}
 
 </style>
 

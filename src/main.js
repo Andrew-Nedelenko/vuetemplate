@@ -30,13 +30,29 @@ new Vue({
 
 
 const hide_nav = $('.hide_nav');
+const wrap = $('.wrapper');
+const hamb = $('.fa-bars');
+let bool = true;
 $(document).ready(function(){
   $('.fa-bars').click(function () { 
+      if(bool)
+      {
+      hide_nav.css('right', '0');
+      hamb.css('transform', 'rotate(90deg)');
+      bool = false;
+      }
+      else
+      {
       hide_nav.css('right', '-40%');
+      hamb.css('transform', 'rotate(0deg)')
+      bool = true;
+      }
   });
 });
 
-$('.fa-bars').click(function () {
-  hide_nav.css('right', '40%');
+wrap.click(function () {
+  console.log('1');
 });
+
+
 

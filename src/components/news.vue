@@ -116,17 +116,20 @@ export default {
 }
 ::-webkit-scrollbar {
     width: 10px;
+    z-index: 1;
 }
  
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
     border-radius: 8px;
+    z-index: 1;
 }
  
 ::-webkit-scrollbar-thumb {
     border-radius: 8px;
     box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
     background-color: rgba(105,204,199, 0.9); 
+    z-index: 1;
 }
 
 

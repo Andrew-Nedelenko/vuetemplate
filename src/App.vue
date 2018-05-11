@@ -51,7 +51,6 @@
          </div>
        </div>
     </section>
-    
     <router-view></router-view>
   </div>
 </template>
@@ -81,8 +80,51 @@ export default {
   height: 100%;
   overflow-x: hidden;
   position: absolute;
+  transition: .3s;
+  z-index: 1;
+  overflow-y: scroll;
 }
 
+
+.wrapper::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.651);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  margin: 0;
+  display: none;
+}
+// .hide_wrap {
+//   position: absolute;
+//   height: 100%;
+//   width: 100%;
+//   top: 0;
+//   left: 0;
+//   background-color: rgba(0, 0, 0, 0.726);
+//   z-index: 20;
+// }
+
+::-webkit-scrollbar {
+    width: 10px;
+    z-index: 1;
+}
+ 
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    border-radius: 8px;
+    z-index: 1;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background-color: rgba(105,204,199, 0.9); 
+    z-index: 1;
+}
 
 .nav_bar {
   position: fixed;
@@ -142,12 +184,14 @@ export default {
   height: 50%;
   margin: 0;
   position: relative;
+  z-index: 4;
 }
 
 .start_section img {
   width: 100%;
   height: 100%;
   position: relative;
+  display: none;
 }
 
 .start_section::before{
@@ -257,7 +301,7 @@ export default {
 
 .hide_nav{
   top: 55px;
-  right: 0px;
+  right: -40%;
   position: fixed;
   width: 40%;
   height: 50vh;
@@ -284,6 +328,7 @@ export default {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
+
 
 
 .hide_nav a:before{
@@ -356,9 +401,11 @@ export default {
 
 .fa-bars {
   position: absolute;
-  top: 17px;
-  right: 17px;
+  top: 10px;
+  right: 10px;
   display: block;
+  transition: .3s;
+  padding: 7px;
 }
 }
 
